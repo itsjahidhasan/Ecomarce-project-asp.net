@@ -1,9 +1,9 @@
 # Ecomarce-project-asp.net
 Members:
-Tahir Azad Khan
-Md. Jahid Hasan
-Abdullah Fahad
-Redowan
+**Tahir Azad Khan,
+**Md. Jahid Hasan,
+**Abdullah Fahad,
+**Redowan
 
 # Project Description:
 This will be a multivendor e-commerce website which will build with .net framework.
