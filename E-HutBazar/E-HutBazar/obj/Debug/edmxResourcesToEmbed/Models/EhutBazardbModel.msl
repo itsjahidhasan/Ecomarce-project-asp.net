@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EhutBazardbModelStoreContainer" CdmEntityContainer="EhutBazardbEntities">
+    <EntitySetMapping Name="User_Admin">
+      <EntityTypeMapping TypeName="EhutBazardbModel.User_Admin">
+        <MappingFragment StoreEntitySet="User_Admin">
+          <ScalarProperty Name="Admin_Id" ColumnName="Admin_Id" />
+          <ScalarProperty Name="Admin_Name" ColumnName="Admin_Name" />
+          <ScalarProperty Name="Admin_Username" ColumnName="Admin_Username" />
+          <ScalarProperty Name="Admin_Password" ColumnName="Admin_Password" />
+          <ScalarProperty Name="Admin_Email" ColumnName="Admin_Email" />
+          <ScalarProperty Name="Admin_Phone" ColumnName="Admin_Phone" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

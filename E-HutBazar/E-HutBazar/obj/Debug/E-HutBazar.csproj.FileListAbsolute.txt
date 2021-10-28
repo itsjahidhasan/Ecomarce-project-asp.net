@@ -58,3 +58,5 @@ E:\UNIVERSITY\ASP.NET\Code\Ecomarce-project-asp.net\E-HutBazar\E-HutBazar\bin\ro
 E:\UNIVERSITY\ASP.NET\Code\Ecomarce-project-asp.net\E-HutBazar\E-HutBazar\bin\roslyn\System.Memory.dll
 E:\UNIVERSITY\ASP.NET\Code\Ecomarce-project-asp.net\E-HutBazar\E-HutBazar\bin\roslyn\System.Numerics.Vectors.dll
 E:\UNIVERSITY\ASP.NET\Code\Ecomarce-project-asp.net\E-HutBazar\E-HutBazar\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\UNIVERSITY\ASP.NET\Code\Ecomarce-project-asp.net\E-HutBazar\E-HutBazar\bin\EntityFramework.dll
+E:\UNIVERSITY\ASP.NET\Code\Ecomarce-project-asp.net\E-HutBazar\E-HutBazar\bin\EntityFramework.xml
