@@ -46,7 +46,7 @@ namespace E_HutBazar.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddShopProducts(Shop_Product sp)
+        public ActionResult AddProducts(Shop_Product sp)
         {
             EhutBazardbEntities db = new EhutBazardbEntities();
             db.Shop_Product.Add(sp);
