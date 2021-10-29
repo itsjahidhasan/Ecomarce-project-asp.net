@@ -1,4 +1,5 @@
-﻿
+﻿@model E_HutBazar.Models.ShopOwner
+
 @{
     ViewBag.Title = "Dashboard";
 }
@@ -6,4 +7,4 @@
 <h2>Dashboard</h2>
 <h3>Logged in as a shop Owner</h3>
 <p>Welcome to E-hutBazar</p>
-
+@Html.ActionLink("AddProduct", "AddProducts", "ShopOwner")

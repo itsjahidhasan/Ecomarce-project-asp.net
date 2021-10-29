@@ -19,6 +19,16 @@
           <Property Name="ShopO_Description" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="User_Type" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Shop_Product">
+          <Key>
+            <PropertyRef Name="Product_Id" />
+          </Key>
+          <Property Name="Product_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product_Description" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Product_Stock" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product_Price" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="ShopOwner">
           <Key>
             <PropertyRef Name="ShopO_Username" />
@@ -40,6 +50,7 @@
         </EntityType>
         <EntityContainer Name="EhutBazardbModelStoreContainer">
           <EntitySet Name="Request_Shopowner" EntityType="Self.Request_Shopowner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Shop_Product" EntityType="Self.Shop_Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ShopOwner" EntityType="Self.ShopOwner" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User_Admin" EntityType="Self.User_Admin" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -62,6 +73,16 @@
           <Property Name="ShopO_Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="User_Type" Type="Int32" Nullable="false" />
         </EntityType>
+        <EntityType Name="Shop_Product">
+          <Key>
+            <PropertyRef Name="Product_Id" />
+          </Key>
+          <Property Name="Product_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Product_Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Product_Stock" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Product_Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
         <EntityType Name="ShopOwner">
           <Key>
             <PropertyRef Name="ShopO_Username" />
@@ -83,6 +104,7 @@
         </EntityType>
         <EntityContainer Name="EhutBazardbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Request_Shopowner" EntityType="Self.Request_Shopowner" />
+          <EntitySet Name="Shop_Product" EntityType="Self.Shop_Product" />
           <EntitySet Name="ShopOwners" EntityType="Self.ShopOwner" />
           <EntitySet Name="User_Admin" EntityType="Self.User_Admin" />
         </EntityContainer>
@@ -104,6 +126,17 @@
                 <ScalarProperty Name="ShopO_Shopname" ColumnName="ShopO_Shopname" />
                 <ScalarProperty Name="ShopO_Description" ColumnName="ShopO_Description" />
                 <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Product">
+            <EntityTypeMapping TypeName="EhutBazardbModel.Shop_Product">
+              <MappingFragment StoreEntitySet="Shop_Product">
+                <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+                <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+                <ScalarProperty Name="Product_Stock" ColumnName="Product_Stock" />
+                <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -16,6 +16,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Product">
+      <EntityTypeMapping TypeName="EhutBazardbModel.Shop_Product">
+        <MappingFragment StoreEntitySet="Shop_Product">
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+          <ScalarProperty Name="Product_Stock" ColumnName="Product_Stock" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ShopOwners">
       <EntityTypeMapping TypeName="EhutBazardbModel.ShopOwner">
         <MappingFragment StoreEntitySet="ShopOwner">

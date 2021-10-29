@@ -40,6 +40,18 @@ namespace E_HutBazar.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult AddProducts()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult AddShopProducts(Shop_Product sp)
+        {
+            EhutBazardbEntities db = new EhutBazardbEntities();
+            db.Shop_Product.Add(sp);
+            db.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
     }
 }

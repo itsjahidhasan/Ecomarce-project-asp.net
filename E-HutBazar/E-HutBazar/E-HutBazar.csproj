@@ -152,6 +152,9 @@
     <Compile Include="Models\ShopOwner.cs">
       <DependentUpon>EhutBazardbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Shop_Product.cs">
+      <DependentUpon>EhutBazardbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\User_Admin.cs">
       <DependentUpon>EhutBazardbModel.tt</DependentUpon>
     </Compile>
@@ -320,6 +323,8 @@
     <Content Include="Views\Admin\Dashboard.cshtml" />
     <Content Include="Views\ShopOwner\Index.cshtml" />
     <Content Include="Views\ShopOwner\Dashboard.cshtml" />
+    <Content Include="Views\ShopOwner\AddProduct.cshtml" />
+    <Content Include="Views\ShopOwner\AddProducts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

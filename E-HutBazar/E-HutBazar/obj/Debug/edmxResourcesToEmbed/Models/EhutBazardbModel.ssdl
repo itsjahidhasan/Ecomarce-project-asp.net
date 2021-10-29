@@ -14,6 +14,16 @@
     <Property Name="ShopO_Description" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="User_Type" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Shop_Product">
+    <Key>
+      <PropertyRef Name="Product_Id" />
+    </Key>
+    <Property Name="Product_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_Description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Product_Stock" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_Price" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="ShopOwner">
     <Key>
       <PropertyRef Name="ShopO_Username" />
@@ -35,6 +45,7 @@
   </EntityType>
   <EntityContainer Name="EhutBazardbModelStoreContainer">
     <EntitySet Name="Request_Shopowner" EntityType="Self.Request_Shopowner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shop_Product" EntityType="Self.Shop_Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ShopOwner" EntityType="Self.ShopOwner" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User_Admin" EntityType="Self.User_Admin" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

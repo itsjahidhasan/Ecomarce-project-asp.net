@@ -26,7 +26,9 @@ namespace E_HutBazar.Models
         }
     
         public DbSet<Request_Shopowner> Request_Shopowner { get; set; }
-        public DbSet<ShopOwner> ShopOwner { get; set; }
+        public DbSet<Shop_Product> Shop_Product { get; set; }
+        public DbSet<ShopOwner> ShopOwners { get; set; }
         public DbSet<User_Admin> User_Admin { get; set; }
+        public object ShopOwner { get; internal set; }
     }
 }
