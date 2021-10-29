@@ -15,7 +15,7 @@ namespace E_HutBazar.Repository
         }
         public static ShopOwner Authenticate(string username, string password)
         {
-            var c = (from sh in db.ShopOwner
+            var c = (from sh in db.ShopOwners
                      where sh.ShopO_Username == username &&
                      sh.ShopO_Password == password
                      select sh).FirstOrDefault();
@@ -24,4 +24,5 @@ namespace E_HutBazar.Repository
             return c;
         }
     }
+    
 }

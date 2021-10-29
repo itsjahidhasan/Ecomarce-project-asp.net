@@ -323,7 +323,6 @@
     <Content Include="Views\Admin\Dashboard.cshtml" />
     <Content Include="Views\ShopOwner\Index.cshtml" />
     <Content Include="Views\ShopOwner\Dashboard.cshtml" />
-    <Content Include="Views\ShopOwner\AddProduct.cshtml" />
     <Content Include="Views\ShopOwner\AddProducts.cshtml" />
   </ItemGroup>
   <ItemGroup>
