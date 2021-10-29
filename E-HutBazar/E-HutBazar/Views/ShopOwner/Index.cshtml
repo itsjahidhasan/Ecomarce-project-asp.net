@@ -24,32 +24,66 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Login" class="btn btn-default btn-outline-success" />
+                <button type="button" style="margin-left:100px" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Sign Up
+                </button>
             </div>
         </div>
     </div>
 </form>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+<form action="/ShopOwner/AddShopOwner" method="post">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up as shopowner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ShopO_Name">Name</label>
+                        <input type="text" class="form-control" id="ShopO_Name" name="ShopO_Name" aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopO_Username">Username</label>
+                        <input type="text" class="form-control" id="ShopO_Username2" name="ShopO_Username" aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopO_Password">Password</label>
+                        <input type="password" class="form-control" id="ShopO_Password2" name="ShopO_Password" aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopO_Email">Email</label>
+                        <input type="text" class="form-control" id="ShopO_Email" name="ShopO_Email" aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopO_Phone">Phone</label>
+                        <input type="text" class="form-control" id="ShopO_Phone" name="ShopO_Phone" aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopO_Shopname">Shop Name</label>
+                        <input type="text" class="form-control" id="ShopO_Shopname" name="ShopO_Shopname" aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopO_Description">Description</label>
+                        <input type="text" class="form-control" id="ShopO_Description" name="ShopO_Description" aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="User_Type">User Type</label>
+                        <input type="number" class="form-control" id="User_Type" name="User_Type" aria-describedby="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" value="Sign up" class="btn btn-default btn-success" />
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+   </form>
