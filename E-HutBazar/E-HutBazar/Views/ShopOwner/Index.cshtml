@@ -1,0 +1,55 @@
+﻿@model E_HutBazar.Models.ShopOwner
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<form action="/ShopOwner/Login" method="post">
+    <div class="form-horizontal">
+
+        <h4>Login as Shop Owner</h4>
+
+        <div class="form-group">
+            <label for="ShopO_Password">Username</label>
+            <input type="text" class="form-control" id="ShopO_Username" name="ShopO_Username" aria-describedby="emailHelp">
+
+        </div>
+
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="Password" class="form-control" id="ShopO_Password" name="ShopO_Password">
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-default btn-outline-success" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+

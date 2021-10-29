@@ -25,6 +25,8 @@ namespace E_HutBazar.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<Request_Shopowner> Request_Shopowner { get; set; }
+        public DbSet<ShopOwner> ShopOwner { get; set; }
         public DbSet<User_Admin> User_Admin { get; set; }
     }
 }

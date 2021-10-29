@@ -5,6 +5,27 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="EhutBazardbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Request_Shopowner">
+          <Key>
+            <PropertyRef Name="ShopO_Id" />
+          </Key>
+          <Property Name="ShopO_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShopO_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Phone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Shopname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Description" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="User_Type" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShopOwner">
+          <Key>
+            <PropertyRef Name="ShopO_Username" />
+          </Key>
+          <Property Name="ShopO_Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="User_Admin">
           <Key>
             <PropertyRef Name="Admin_Id" />
@@ -18,6 +39,8 @@
           <Property Name="User_Type" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="EhutBazardbModelStoreContainer">
+          <EntitySet Name="Request_Shopowner" EntityType="Self.Request_Shopowner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShopOwner" EntityType="Self.ShopOwner" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User_Admin" EntityType="Self.User_Admin" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -25,6 +48,27 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EhutBazardbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Request_Shopowner">
+          <Key>
+            <PropertyRef Name="ShopO_Id" />
+          </Key>
+          <Property Name="ShopO_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShopO_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Shopname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_Type" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShopOwner">
+          <Key>
+            <PropertyRef Name="ShopO_Username" />
+          </Key>
+          <Property Name="ShopO_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
         <EntityType Name="User_Admin">
           <Key>
             <PropertyRef Name="Admin_Id" />
@@ -38,6 +82,8 @@
           <Property Name="User_Type" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityContainer Name="EhutBazardbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Request_Shopowner" EntityType="Self.Request_Shopowner" />
+          <EntitySet Name="ShopOwners" EntityType="Self.ShopOwner" />
           <EntitySet Name="User_Admin" EntityType="Self.User_Admin" />
         </EntityContainer>
       </Schema>
@@ -46,6 +92,29 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EhutBazardbModelStoreContainer" CdmEntityContainer="EhutBazardbEntities">
+          <EntitySetMapping Name="Request_Shopowner">
+            <EntityTypeMapping TypeName="EhutBazardbModel.Request_Shopowner">
+              <MappingFragment StoreEntitySet="Request_Shopowner">
+                <ScalarProperty Name="ShopO_Id" ColumnName="ShopO_Id" />
+                <ScalarProperty Name="ShopO_Name" ColumnName="ShopO_Name" />
+                <ScalarProperty Name="ShopO_Username" ColumnName="ShopO_Username" />
+                <ScalarProperty Name="ShopO_Password" ColumnName="ShopO_Password" />
+                <ScalarProperty Name="ShopO_Email" ColumnName="ShopO_Email" />
+                <ScalarProperty Name="ShopO_Phone" ColumnName="ShopO_Phone" />
+                <ScalarProperty Name="ShopO_Shopname" ColumnName="ShopO_Shopname" />
+                <ScalarProperty Name="ShopO_Description" ColumnName="ShopO_Description" />
+                <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShopOwners">
+            <EntityTypeMapping TypeName="EhutBazardbModel.ShopOwner">
+              <MappingFragment StoreEntitySet="ShopOwner">
+                <ScalarProperty Name="ShopO_Username" ColumnName="ShopO_Username" />
+                <ScalarProperty Name="ShopO_Password" ColumnName="ShopO_Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="User_Admin">
             <EntityTypeMapping TypeName="EhutBazardbModel.User_Admin">
               <MappingFragment StoreEntitySet="User_Admin">

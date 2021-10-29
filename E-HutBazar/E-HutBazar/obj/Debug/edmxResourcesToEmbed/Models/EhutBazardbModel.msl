@@ -1,6 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EhutBazardbModelStoreContainer" CdmEntityContainer="EhutBazardbEntities">
+    <EntitySetMapping Name="Request_Shopowner">
+      <EntityTypeMapping TypeName="EhutBazardbModel.Request_Shopowner">
+        <MappingFragment StoreEntitySet="Request_Shopowner">
+          <ScalarProperty Name="ShopO_Id" ColumnName="ShopO_Id" />
+          <ScalarProperty Name="ShopO_Name" ColumnName="ShopO_Name" />
+          <ScalarProperty Name="ShopO_Username" ColumnName="ShopO_Username" />
+          <ScalarProperty Name="ShopO_Password" ColumnName="ShopO_Password" />
+          <ScalarProperty Name="ShopO_Email" ColumnName="ShopO_Email" />
+          <ScalarProperty Name="ShopO_Phone" ColumnName="ShopO_Phone" />
+          <ScalarProperty Name="ShopO_Shopname" ColumnName="ShopO_Shopname" />
+          <ScalarProperty Name="ShopO_Description" ColumnName="ShopO_Description" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopOwners">
+      <EntityTypeMapping TypeName="EhutBazardbModel.ShopOwner">
+        <MappingFragment StoreEntitySet="ShopOwner">
+          <ScalarProperty Name="ShopO_Username" ColumnName="ShopO_Username" />
+          <ScalarProperty Name="ShopO_Password" ColumnName="ShopO_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="User_Admin">
       <EntityTypeMapping TypeName="EhutBazardbModel.User_Admin">
         <MappingFragment StoreEntitySet="User_Admin">
