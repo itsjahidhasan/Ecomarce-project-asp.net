@@ -33,5 +33,23 @@ namespace E_HutBazar.Controllers
         {
             return View();
         }
+        public ActionResult AddAdmin(User_Admin a)
+        {
+            EhutBazardbEntities db = new EhutBazardbEntities();
+            db.User_Admin.Add(a);
+            db.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+        public ActionResult GetAdminUser()
+        {
+            
+            
+            EhutBazardbEntities db = new EhutBazardbEntities();
+            //var admins = db.User_Admin.ToList();
+            var admins = from ad in db.User_Admin
+                         where ad.Admin_Username != "jahid"
+                         select ad;
+            return View(admins);
+        }
     }
 }

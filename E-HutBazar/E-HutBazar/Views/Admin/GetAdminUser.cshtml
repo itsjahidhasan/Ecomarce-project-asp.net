@@ -1,0 +1,69 @@
+﻿@model IEnumerable<E_HutBazar.Models.User_Admin>
+
+@{
+    ViewBag.Title = "GetAdminUser";
+}
+
+<h2>GetAdminUser</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Admin_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Admin_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Admin_Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Admin_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Admin_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Admin_Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User_Type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Admin_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Admin_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Admin_Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Admin_Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Admin_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Admin_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User_Type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

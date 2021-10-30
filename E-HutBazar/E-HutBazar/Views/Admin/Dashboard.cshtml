@@ -1,8 +1,64 @@
-﻿
+﻿@model E_HutBazar.Models.User_Admin
 @{
     ViewBag.Title = "Dashboard";
 }
+<div class="container">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Add another admin
+    </button>
+    @Html.ActionLink("Admin List", "GetAdminUser", "Admin")
+    <form action="/Admin/AddAdmin" method="post">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="Admin_Name">Name</label>
+                            <input type="text" class="form-control" id="Admin_Name" name="Admin_Name" aria-describedby="">
 
-<h2>Dashboard</h2>
-<p>Welcome to E-hutBazar</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Admin_Username">Username</label>
+                            <input type="text" class="form-control" id="Admin_Username" name="Admin_Username" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="Admin_Password">Password</label>
+                            <input type="password" class="form-control" id="Admin_Password" name="Admin_Password" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="Admin_Email">Email</label>
+                            <input type="email" class="form-control" id="Admin_Email" name="Admin_Email" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="Admin_Phone">Phone</label>
+                            <input type="tel" class="form-control" id="Admin_Phone" name="Admin_Phone" aria-describedby="">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="User_Type">UserType</label>
+                            <input type="number" class="form-control" id="User_Type" name="User_Type" aria-describedby="" value="1" disabled>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" value="Submit" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 
