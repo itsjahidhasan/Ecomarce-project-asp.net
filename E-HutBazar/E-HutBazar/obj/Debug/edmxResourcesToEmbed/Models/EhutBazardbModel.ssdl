@@ -26,10 +26,18 @@
   </EntityType>
   <EntityType Name="ShopOwner">
     <Key>
-      <PropertyRef Name="ShopO_Username" />
+      <PropertyRef Name="ShopO_Id" />
     </Key>
+    <Property Name="ShopO_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShopO_Name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ShopO_Username" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ShopO_Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShopO_Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShopO_Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShopO_Shopname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShopO_Description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="User_Type" Type="int" Nullable="false" />
+    <Property Name="User_Validation" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="User_Admin">
     <Key>

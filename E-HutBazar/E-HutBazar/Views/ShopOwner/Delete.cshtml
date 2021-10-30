@@ -1,0 +1,12 @@
+﻿@model E_HutBazar.Models.Shop_Product
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<form action="/ShopOwner/Delete" method="post">
+    <h3>Are you sure you want to delete this product @Model.Product_Name?</h3>
+    <input type="hidden" name="Product_Id" value="@Model.Product_Id">
+    <input type="submit" value="Delete" class="btn btn-outline-warning">
+</form>

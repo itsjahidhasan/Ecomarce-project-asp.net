@@ -31,10 +31,18 @@
         </EntityType>
         <EntityType Name="ShopOwner">
           <Key>
-            <PropertyRef Name="ShopO_Username" />
+            <PropertyRef Name="ShopO_Id" />
           </Key>
+          <Property Name="ShopO_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShopO_Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ShopO_Username" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ShopO_Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Phone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Shopname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShopO_Description" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="User_Type" Type="int" Nullable="false" />
+          <Property Name="User_Validation" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="User_Admin">
           <Key>
@@ -85,10 +93,18 @@
         </EntityType>
         <EntityType Name="ShopOwner">
           <Key>
-            <PropertyRef Name="ShopO_Username" />
+            <PropertyRef Name="ShopO_Id" />
           </Key>
+          <Property Name="ShopO_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShopO_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ShopO_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ShopO_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Shopname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShopO_Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_Type" Type="Int32" Nullable="false" />
+          <Property Name="User_Validation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="User_Admin">
           <Key>
@@ -143,8 +159,16 @@
           <EntitySetMapping Name="ShopOwners">
             <EntityTypeMapping TypeName="EhutBazardbModel.ShopOwner">
               <MappingFragment StoreEntitySet="ShopOwner">
+                <ScalarProperty Name="ShopO_Id" ColumnName="ShopO_Id" />
+                <ScalarProperty Name="ShopO_Name" ColumnName="ShopO_Name" />
                 <ScalarProperty Name="ShopO_Username" ColumnName="ShopO_Username" />
                 <ScalarProperty Name="ShopO_Password" ColumnName="ShopO_Password" />
+                <ScalarProperty Name="ShopO_Email" ColumnName="ShopO_Email" />
+                <ScalarProperty Name="ShopO_Phone" ColumnName="ShopO_Phone" />
+                <ScalarProperty Name="ShopO_Shopname" ColumnName="ShopO_Shopname" />
+                <ScalarProperty Name="ShopO_Description" ColumnName="ShopO_Description" />
+                <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+                <ScalarProperty Name="User_Validation" ColumnName="User_Validation" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
