@@ -51,5 +51,13 @@ namespace E_HutBazar.Controllers
                          select ad;
             return View(admins);
         }
+        public ActionResult Update(int id)
+        {
+            EhutBazardbEntities db = new EhutBazardbEntities();
+            var admin = (from ad in db.User_Admin
+                         where ad.Admin_Id == id
+                         select ad).FirstOrDefault();
+            return View(admin);
+        }
     }
 }
