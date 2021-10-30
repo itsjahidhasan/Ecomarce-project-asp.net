@@ -51,6 +51,7 @@ namespace E_HutBazar.Controllers
                          select ad;
             return View(admins);
         }
+        
         public ActionResult Update(int id)
         {
             EhutBazardbEntities db = new EhutBazardbEntities();
@@ -59,5 +60,42 @@ namespace E_HutBazar.Controllers
                          select ad).FirstOrDefault();
             return View(admin);
         }
+        [HttpPost]
+        public ActionResult Update(User_Admin a)
+        {
+            using (EhutBazardbEntities db = new EhutBazardbEntities())
+            {
+                User_Admin entity = (from ad in db.User_Admin
+                                     where ad.Admin_Id == a.Admin_Id
+                                     select ad).FirstOrDefault();
+                db.Entry(entity).CurrentValues.SetValues(a);
+                db.SaveChanges();
+                return RedirectToAction("GetAdminUser");
+            }
+        }
+        public ActionResult Delete(int id)
+        {
+            using (EhutBazardbEntities db = new EhutBazardbEntities())
+            {
+                var admin = (from ad in db.User_Admin
+                             where ad.Admin_Id == id
+                             select ad).FirstOrDefault();
+                return View(admin);
+            }
+        }
+        [HttpPost]
+        public ActionResult Delete(User_Admin a)
+        {
+            using (EhutBazardbEntities db = new EhutBazardbEntities())
+            {
+                var admin = (from ad in db.User_Admin
+                             where ad.Admin_Id == a.Admin_Id
+                             select ad).FirstOrDefault();
+                db.User_Admin.Remove(admin);
+                db.SaveChanges();
+                return RedirectToAction("Dashboard");
+            }
+        }
+            
     }
 }
