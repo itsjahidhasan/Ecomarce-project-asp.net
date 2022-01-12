@@ -1,7 +1,7 @@
 # Ecomarce-project-asp.net
 Members:
-**Tahir Azad Khan,
 **Md. Jahid Hasan,
+**Tahir Azad Khan,
 **Abdullah Fahad,
 **Redowan
 
